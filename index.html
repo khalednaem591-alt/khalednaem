@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Khaled Naeem | Professional Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background:
+                linear-gradient(135deg, rgba(5, 15, 35, .96), rgba(10, 35, 65, .94)),
+                url("file_00000000a45c81f4ac59683d132d99d4.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            direction: ltr;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: #dbeafe;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 50px 0;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid rgba(147,197,253,.35);
+            background: rgba(96,165,250,.12);
+            color: #93c5fd;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.15;
+            direction: ltr;
+            text-align: right;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            color: #dbeafe;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #b8c7d9;
+            font-size: 19px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 10px;
+            font-size: 17px;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,.2);
+            color: white;
+            background: rgba(255,255,255,.06);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,.12);
+        }
+
+        /* PROFILE IMAGE */
+
+        .hero-image {
+            width: 330px;
+            height: 330px;
+            flex-shrink: 0;
+            border-radius: 30px;
+            padding: 10px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.2);
+            box-shadow: 0 25px 70px rgba(0,0,0,.4);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            margin: 35px 0;
+        }
+
+        .section-title {
+            margin-bottom: 25px;
+        }
+
+        .section-title span {
+            color: #60a5fa;
+            font-size: 15px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-top: 5px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            padding: 28px;
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(96,165,250,.45);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(59,130,246,.15);
+            color: #93c5fd;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #b8c7d9;
+            font-size: 16px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .about-box {
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .about-box p {
+            color: #c5d1df;
+            font-size: 18px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            direction: ltr;
+            justify-content: flex-start;
+        }
+
+        .skill {
+            padding: 10px 18px;
+            background: rgba(96,165,250,.12);
+            border: 1px solid rgba(96,165,250,.3);
+            color: #dbeafe;
+            border-radius: 30px;
+            font-size: 16px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            min-height: 190px;
+            padding: 25px;
+            border-radius: 18px;
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,.09),
+                rgba(255,255,255,.04)
+            );
+            border: 1px solid rgba(255,255,255,.12);
+        }
+
+        .project h3 {
+            direction: ltr;
+            text-align: left;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #b8c7d9;
+        }
+
+        /* INFO */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .info {
+            padding: 20px;
+            text-align: center;
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 15px;
+        }
+
+        .info strong {
+            display: block;
+            color: #93c5fd;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .info span {
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 50px 15px 35px;
+            color: #9fb0c3;
+        }
+
+        footer strong {
+            color: white;
+            font-size: 22px;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 35px;
+            }
+
+            .hero h1 {
+                text-align: center;
+                font-size: 45px;
+            }
+
+            .hero p {
+                margin: 0 auto 25px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .cards,
+            .projects {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            nav {
+                height: 65px;
+            }
+
+            nav div:last-child {
+                display: none;
+            }
+
+            .hero-image {
+                width: 240px;
+                height: 240px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .cards,
+            .projects,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">
+            Khaled <span>Naeem</span>
+        </div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <div class="tag">
+                Programming & Technology
+            </div>
+
+            <h1>
+                Khaled <span>Naeem</span>
+            </h1>
+
+            <h2>
+                Web Development & Programming
+            </h2>
+
+            <p>
+                مهتم بتطوير مواقع الويب والمشاريع الرقمية،
+                وأسعى إلى تطوير مهاراتي في البرمجة وبناء
+                واجهات ومواقع حديثة ومنظمة وسهلة الاستخدام.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn btn-primary">
+                    View Projects
+                </a>
+
+                <a href="#about" class="btn btn-secondary">
+                    About Me
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+            <img
+                src="file_00000000a45c81f4ac59683d132d99d4.png"
+                alt="Khaled Naeem"
+            >
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE INFO -->
+    <section>
+
+        <div class="info-grid">
+
+            <div class="info">
+                <strong>NAME</strong>
+                <span>Khaled Naeem</span>
+            </div>
+
+            <div class="info">
+                <strong>FIELD</strong>
+                <span>Programming</span>
+            </div>
+
+            <div class="info">
+                <strong>SPECIALIZATION</strong>
+                <span>Web Development</span>
+            </div>
+
+            <div class="info">
+                <strong>WORK</strong>
+                <span>Digital Projects</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-title">
+            <span>PROFILE</span>
+            <h2>نبذة عني</h2>
+        </div>
+
+        <div class="about">
+
+            <div class="about-box">
+
+                <p>
+                    Khaled Naeem مهتم بمجال البرمجة وتطوير مواقع
+                    الويب، ويعمل على تعلم وتطبيق التقنيات المستخدمة
+                    في إنشاء وتطوير المواقع الإلكترونية والمشاريع
+                    الرقمية.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <p>
+                    يهتم بتطوير مهاراته في تصميم صفحات الويب،
+                    بناء الواجهات، كتابة الأكواد، تنظيم المشاريع
+                    البرمجية وتحسين تجربة استخدام المواقع.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+
+        <div class="section-title">
+            <span>WHAT I DO</span>
+            <h2>مجالات العمل</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">01</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    إنشاء وتطوير صفحات ومواقع ويب حديثة
+                    ومنظمة ومتوافقة مع مختلف الأجهزة.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">02</div>
+
+                <h3>UI Development</h3>
+
+                <p>
+                    بناء واجهات مستخدم بسيطة ومنظمة
+                    مع الاهتمام بالشكل وتجربة الاستخدام.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">03</div>
+
+                <h3>Digital Projects</h3>
+
+                <p>
+                    تحويل الأفكار والتصميمات إلى صفحات
+                    ومشاريع رقمية قابلة للاستخدام.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <div class="section-title">
+            <span>TECHNOLOGY</span>
+            <h2>المهارات والاهتمامات</h2>
+        </div>
+
+        <div class="skills">
+
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Web Development</div>
+            <div class="skill">Programming</div>
+            <div class="skill">Software Development</div>
+            <div class="skill">Artificial Intelligence</div>
+            <div class="skill">Computer Technology</div>
+            <div class="skill">Digital Projects</div>
+            <div class="skill">Modern Technologies</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <div class="section-title">
+            <span>MY WORK</span>
+            <h2>المشاريع والأعمال</h2>
+        </div>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>Personal Websites</h3>
+
+                <p>
+                    مواقع شخصية تعرض المعلومات والمهارات
+                    والأعمال بطريقة احترافية.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Portfolio Websites</h3>
+
+                <p>
+                    صفحات Portfolio لعرض المشاريع
+                    والمهارات والخبرات التقنية.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Landing Pages</h3>
+
+                <p>
+                    صفحات هبوط حديثة مناسبة للأفكار
+                    والمشاريع والخدمات الرقمية.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Business Websites</h3>
+
+                <p>
+                    مواقع بسيطة للمشاريع والأعمال
+                    والخدمات المختلفة.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Interactive Web Pages</h3>
+
+                <p>
+                    صفحات ويب تحتوي على عناصر
+                    تفاعلية باستخدام JavaScript.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Digital Projects</h3>
+
+                <p>
+                    تنفيذ أفكار ومشاريع رقمية وتطويرها
+                    باستخدام تقنيات الويب الحديثة.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOAL -->
+    <section>
+
+        <div class="section-title">
+            <span>MY GOAL</span>
+            <h2>الهدف المهني</h2>
+        </div>
+
+        <div class="about-box">
+
+            <p>
+                الاستمرار في تطوير المهارات البرمجية،
+                وزيادة الخبرة في مجال Web Development،
+                والعمل على مشاريع تقنية أكثر تطورًا
+                في المستقبل، مع الاستمرار في تعلم
+                التقنيات الحديثة وتحسين جودة المشاريع.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <strong>Khaled Naeem</strong>
+
+        <br>
+
+        Programming | Web Development | Technology
+
+    </footer>
+
+</div>
+
+</body>
+                                       </html>
